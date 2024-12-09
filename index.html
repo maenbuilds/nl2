@@ -1,0 +1,285 @@
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h4
+            
+      
+    
+    
+</body>
+</html>
+   
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NL Hybrid</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url(OIP\ \(1\).jpg) no-repeat center center/cover; /* Replace with your background image */
+     
+      color:white;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    /* Dark Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+      z-index: 1; /* Ensure it is above the background */
+    }
+
+    /* Popup Styles */
+    .popup-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2; /* Above the overlay */
+      transition: opacity 0.5s ease;
+    }
+
+    .popup-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .popup-content {
+      background: white;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 3;
+    }
+
+    .popup-content h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .popup-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .accept-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .accept-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      display: none;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeIn 1s ease;
+      position: relative;
+      z-index: 2; /* Above the overlay */
+    }
+
+    .main-content.active {
+      display: block;
+    }
+
+    .main-content h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .main-content .logo-card img {
+      border-radius: 10px;
+    }
+
+    .main-content .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .main-content .download-btn,
+    .main-content .discord-btn {
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .main-content .download-btn:hover,
+    .main-content .discord-btn:hover {
+      background-color: #e6b800;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-container h1 {
+      margin-bottom: 20px;
+    }
+
+    .faq-question {
+      background: #ffcc00;
+      color: black;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+ 
+
+  <div class="overlay"></div>
+
+  <div id="popup" class="popup-container">
+    <div class="popup-content">
+      <h1>Important Information</h1>
+      <p>By clicking accept you understand the resources provided here are here for a reason.</p>
+      <button id="acceptButton" class="accept-button">Accept</button>
+    </div>
+  </div>
+
+  <div id="mainContent" class="main-content">
+    <section class="hero">
+      <h1>Welcome to</h1>
+      <div class="logo-card">
+        <img src="Screenshot_9-12-2024_194741_web.nlhybrid.xyz.jpeg" alt="NL Hybrid Logo" style="max-width: 100%; border-radius: 10px;">
+      </div>
+      <div class="buttons-container">
+        <button class="download-btn" onclick="window.location.href='https://bstlar.com/1fs/NLHybrid'">Download Now</button>
+        <button class="discord-btn" onclick="window.location.href='https://discord.gg/xdnJzhp3'">Join Discord</button>
+      </div>
+    </section>
+    <section class="faq-container">
+      <h1>INFO</h1>
+      <div class="faq-question">Basic Info: </div>
+      <p class="faq-answer">
+        -
+        Play 1 game on a new account without hybrid so you don't get a matchmaking error (you can leave right as you load in).
+        To get the key, open NL Hybrid then go to https://bstlar.com/Hb/nlproxykey, or click the button in the launcher for it. They only last (48 HRS).
+        Be sure to play 1 regular game on the account you are using for NL Hybrid (1 regular game without NL Hybrid).</p>
+        <div class="faq-question">How To Equip Cosmetics You Don't Own With NL Hybrid? </div>
+        <p class="faq-answer"> Equip any cosmetic you want. Go in-game and enjoy. No kicks, no special methods.
+          To get your pickaxe to show, do any emote that changes your pickaxe twice!
+          For example, do the "Put 'Er There" emote twice.
+          <div class="faq-question">Troubleshooting </div>
+          <p class="faq-answer">Press Fix Issues in the launcher and verify Fortnite.
+            If you get into the lobby with no cosmetics, you may need to perform a factory reset/downgrade your version of Windows (I had this issue once, and it was the only way I fixed it).
+            If the application immediately closes, or any other NL Hybrid error happens, be sure to disable anti-virus (even if you did, Windows may reactivate it, so check before starting). This will also sometimes fix "An error occurred".
+            If you continue to get "An error occurred..." or crash when pressing "Fix Issues", delete One Drive.
+            99% of connection issues can be fixed if you use a VPN (NL Hybrid servers may be blocked via your ISP).
+            If you are kicked for "You have been removed from the match due to the use of tools...", you do not have VCRedist installed or haven't restarted your PC after installing it. Get it from #🔥┃nl-hybrid in the Discord server. If you have this issue already, or it's already installed, restart your PC and try again.</p>
+            <div class="faq-question"> How to get ur epic ID? </div>
+              <p class="faq-answer"> Learn how to locate your Epic Account ID by visiting:<a href="https://www.epicgames.com/help/en-US/c-Category_EpicAccount/c-AccountSecurity/what-is-an-epic-account-id-and-where-can-i-find-it-a000084674?sessionInvalidated=true#:~:text=Locating%20your%20Epic%20Account%20ID%20in%20Fortnite&text=From%20the%20lobby%2C%20open%20the,Hover%20over%20EPIC%20ACCOUNT%20ID" target="_blank">Epic Games Help: Locating Your Account ID</a>
+
+
+                
+    </section>
+  </div>
+
+  <script>
+    const popup = document.getElementById("popup");
+    const mainContent = document.getElementById("mainContent");
+    const acceptButton = document.getElementById("acceptButton");
+
+    acceptButton.addEventListener("click", () => {
+      popup.classList.add("popup-hidden");
+      setTimeout(() => {
+        popup.style.display = "none";
+        mainContent.classList.add("active");
+      }, 500);
+    });
+  </script>
+</body>
+</html>
+body {
+background-color: black;
